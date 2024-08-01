@@ -5,7 +5,6 @@
     <link rel="shortcut icon" href="https://imgs.search.brave.com/Nma2imUBcfLfPuJa6CSSpfnE-0duAjrUFRj4TIsZjf4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zeW1i/bC13b3JsZC5ha2Ft/YWl6ZWQubmV0L2kv/d2VicC9lOC8xNWVk/ZTIzNDM5MGNlMjQ3/Y2IxNWMwZDRhMDU0/M2Mud2VicA" type="image/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -89,7 +88,7 @@
       .intro {
         font-family: "Work Sans", sans-serif;
         font-weight: bold;
-        font-size: 25pt;
+        font-size: 40pt;
       }
     </style>
   </head>
@@ -97,70 +96,27 @@
   <body>
     <div id="overlay" class="overlay intro"> click to enter... </div>
     <div id="content" class="content">
-      <div class="profile-info">
-        <img src="https://cdn.discordapp.com/avatars/956672579664506880/0dd914dc91a5fdac6c43a3955c6358a0.webp?size=1024&format=webp&width=0&height=320" alt="User Avatar" />
-        <h1 class="neon-text" id="dynamic-title"></h1>
-      </div>
-      <div class="social-icons neon-icons">
-        <a href="https://discord.com/calirp" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.youtube.com/@idkdamon" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/user/31dvrihfxlgaxqppeb3j6d4bf7se?si=a30f495a7cee483a" target="_blank"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.twitch.tv/idkdamon" target="_blank"><i class="fab fa-twitch"></i></a>
+      <div class="semi-transparent-container">
+        <div class="profile-info">
+          <img src="https://cdn.discordapp.com/avatars/956672579664506880/0dd914dc91a5fdac6c43a3955c6358a0.webp?size=1024&format=webp&width=0&height=320" alt="User Avatar" />
+          <h2 class="neon-text" id="moving-name" style="margin-top: 10px">@</h2>
+        </div>
+        <div class="dynamic-title-container">
+          <h1 class="neon-text" id="dynamic-title">@damon</h1>
+        </div>
+        <div class="social-icons neon-icons">
+          <a href="https://discord.gg/calirp" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://www.youtube.com/@idkdamon" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://open.spotify.com/user/31dvrihfxlgaxqppeb3j6d4bf7se?si=a30f495a7cee483a" target="_blank"><i class="fab fa-spotify"></i></a>
+          <a href="https://www.twitch.tv/idkdamon" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
       </div>
     </div>
     <video id="background-video" loop autoplay muted>
       <source src="https://images.damon.lol/videos/bg.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <script>
-      document.addEventListener("click", function () {
-        var video = document.getElementById("background-video");
-        var overlay = document.getElementById("overlay");
-        var content = document.getElementById("content");
-
-        video.muted = false;
-        overlay.classList.add("fade-out");
-        content.style.display = "flex";
-
-        anime({
-          targets: content,
-          opacity: [0, 1],
-          duration: 1000,
-          easing: "easeOutQuad",
-          complete: function () {
-            overlay.style.display = "none";
-          },
-        });
-      });
-
-      var titleElement = document.getElementById("dynamic-title");
-      var fullText = "@damon";
-      var index = 0;
-      var adding = true;
-
-      function animateTitle() {
-        if (adding) {
-          if (index < fullText.length) {
-            titleElement.textContent += fullText.charAt(index);
-            document.title = titleElement.textContent;
-            index++;
-          } else {
-            adding = false;
-          }
-        } else {
-          if (index > 0) {
-            titleElement.textContent = titleElement.textContent.slice(0, -1);
-            document.title = titleElement.textContent;
-            index--;
-          } else {
-            adding = true;
-          }
-        }
-        setTimeout(animateTitle, 200);
-      }
-
-      animateTitle();
-    </script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
 
