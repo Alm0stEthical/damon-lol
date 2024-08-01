@@ -105,12 +105,7 @@
       </div>
     </div>
     <div class="social-icons neon-icons">
-      <a href="https://discord.com/.540hz" target="_blank"><i class="fab fa-discord"></i></a>
-      <a href="https://youtube.com/channel/UCTExaJhoWqmUN6V-H5YWZmA" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://open.spotify.com/user/dachlerbruno?si=bb6887a1b7ec45de" target="_blank"><i class="fab fa-spotify"></i></a>
-      <a href="https://snapchat.com/add/joouskaa" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="https://twitch.tv/iwokedup" target="_blank"><i class="fab fa-twitch"></i></a>
-      <a href="https://x.com/Q3VYT" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://discord.com/calirp" target="_blank"><i class="fab fa-discord"></i></a>
     </div>
   </div>
   <video id="background-video" loop autoplay muted>
