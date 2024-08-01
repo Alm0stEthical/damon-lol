@@ -106,6 +106,7 @@
     </div>
     <div class="social-icons neon-icons">
       <a href="https://discord.com/calirp" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://www.youtube.com/@idkdamon" target="_blank"><i class="fab fa-x-youtube"></i></a>
     </div>
   </div>
   <video id="background-video" loop autoplay muted>
